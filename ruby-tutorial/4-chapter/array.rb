@@ -38,3 +38,23 @@ pp even_numbers#=> [2, 4, 6, 8, 10]
 odd_numbers = numbers.reject{|n| n.even?}
 pp odd_numbers
 
+#find/detect method
+eVen_number = numbers.find{|n| n.even?}
+pp eVen_number
+
+#sum method
+pp numbers.sum#=> 55
+chars = ['a', 'b', 'c']
+chars1 = chars.sum("")
+pp chars1
+
+#join method
+chars2 = chars.join
+pp chars2
+chars3 = chars.join('-')
+pp chars3
+
+data = ['a', 2, 'b', 4]
+data_join = data.join
+pp data_join
+

@@ -44,5 +44,3 @@ end
 =end
 def add(x, y) = x + y
 puts add(1, 2)
-
-

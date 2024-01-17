@@ -44,7 +44,7 @@ puts nil || false # => false
 puts false || nil # => nil
 puts nil || false || 2 && 3 # => 3
 
-#unless文
+#unless
 status = 'error'
 unless status == 'ok'
     puts "異常アリ"
@@ -52,7 +52,7 @@ else
     puts "正常"
 end
 
-#case文
+#case
 case country
 when 'japan', '日本'
     puts 'こんにちは'

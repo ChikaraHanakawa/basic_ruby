@@ -20,7 +20,7 @@ puts 10.to_s(16)
 #数値を16進数の文字列に変換　括弧無し
 puts 10.to_s 16
 
-#改行毎にメソッドを実行
+#改行毎にmethodを実行
 puts 1.to_s
 puts nil.to_s
 puts 10.to_s(16)
@@ -53,7 +53,6 @@ puts t1 and f1 # => false
 puts t1 or f1 # => true
 puts !f1 || t1 # => ture
 
-#alius method 機能は同じメソッド
+#alius method 機能は同じ
 puts c.length # => 5
 puts c.size # => 5
-

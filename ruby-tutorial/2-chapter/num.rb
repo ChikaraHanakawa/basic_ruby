@@ -2,7 +2,7 @@
 puts 1 / 2
 #小数点以下表示
 puts 1 / 2.to_f
-#rationalメソッド
+#rational method
 puts 0.1r * 3.0r == 0.3
 a = 0.1; b = 0.3
 puts a.rationalize * b.rationalize
@@ -20,5 +20,3 @@ puts 0b11111111
 puts 0o377
 #16進数
 puts 0xff
-
-

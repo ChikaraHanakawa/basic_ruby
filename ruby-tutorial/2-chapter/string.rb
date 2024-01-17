@@ -43,11 +43,11 @@ TEXT2
 puts c[0]
 puts c[1]
 
-#sprintsメソッド
+#sprints method
 puts sprintf('%0.3f', 1.2)
 puts '%0.3f + %0.3f' % [1.2, 0.48]
 
-#joinメソッド
+#join method
 puts [10,20,30].join
 
 #繰り返し
@@ -56,7 +56,7 @@ puts 'hoge' * 10
 #Unicode
 puts "\u3042\u3044\u3046\u3048\u304A"
 
-#upcaseメソッド
+#upcase method
 label = 'ruby'
 puts label.upcase
 label.upcase!
