@@ -45,3 +45,15 @@ puts a; puts b
 c = d = "hello"
 c.upcase!   #大文字変換
 puts c; puts d  #同時に代入すると処理も一緒になってしまう
+
+#and, or, not
+t1 = true
+f1 = false
+puts t1 and f1 # => false
+puts t1 or f1 # => true
+puts !f1 || t1 # => ture
+
+#alius method 機能は同じメソッド
+puts c.length # => 5
+puts c.size # => 5
+
