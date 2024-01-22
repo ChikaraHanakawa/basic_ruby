@@ -58,3 +58,9 @@ data = ['a', 2, 'b', 4]
 data_join = data.join
 pp data_join
 
+#chars method
+pp 'Ruby'.chars#=> ["R", "u", "b", "y"]
+
+#split method
+pp 'Ruby,Java,Python'.split(',')#=> ["Ruby","Java","Python"]
+
