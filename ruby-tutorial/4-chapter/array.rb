@@ -64,3 +64,17 @@ pp 'Ruby'.chars#=> ["R", "u", "b", "y"]
 #split method
 pp 'Ruby,Java,Python'.split(',')#=> ["Ruby","Java","Python"]
 
+#Array.new method
+a = Array.new(5)
+pp a#=> [nil, nil, nil, nil, nil]
+b = Array.new(5, 0)
+pp b#=> [0, 0, 0, 0, 0]
+pp c = Array.new(10){|n| n % 3 + 1}#=> [1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
+
+def foo(a, *b, c, d)
+    pp "a=#{a}, b=#{b}, c=#{c}, d=#{d}"
+end
+foo(1, 2, 3, 4, 5)#=> a=1, b=[2, 3], c=4, d=5
+
+
+
