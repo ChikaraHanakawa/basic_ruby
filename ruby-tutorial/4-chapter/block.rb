@@ -65,3 +65,10 @@ dimensions.each do |length, width|
 end
 pp areas
 
+#3つのブロックパラメータの内2つに配列の要素を入れる場合
+dimensions.each_with_index do |(length, width), index|#()を利用しないと配列の2つの要素が一つのブロックパラメータに入ってしまう
+    puts "length:#{length}, width:#{width}, index:#{index}"
+end
+(len, wid), ind = [[10, 20], 0]
+#=> len = 10, wid = 20, ind = 0
+
