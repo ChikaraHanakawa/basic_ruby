@@ -71,4 +71,56 @@ def factorial(n)
 end
 pp factorial(5)#=> 120
 
+#繰り返し処理の入れ子
+egg = ['Oyakodon', 'Omelette rice', 'Fried rice', 'Raw egg on rice']
+num = [1, 2, 3, 4]
+egg.each do |egg|
+    num.shuffle.each do |m|
+        puts "#{egg}, #{m}"
+        break if n == 3
+    end
+end
+=begin
+=> Oyakodon, random
+...
+=> Raw egg on rice, random
+=end
 
+#throw method, catch method
+catch :done do
+    egg.shuffle.each do |egg|
+        num.shuffle.each do |l|
+            puts "#{egg}:#{l}"
+            if egg == 'Fried rice' && l == 3
+                throw :done
+            end
+        end
+    end
+end
+=begin
+=> Fried rice:2
+   Fried rice:4
+   Fried rice:3
+=end
+
+#redo method
+vegetable = ['carrot', 'watermelon', 'strawberry']
+count = 0
+vegetable.each do |vegetable|
+    print "#{vegetable}は好きですか？ => "
+    answer = 'いいえ'
+    puts answer
+
+    count += 1
+    redo if answer != 'はい' && count < 2
+
+    count = 0
+end
+=begin
+=> carrotは好きですか？ => いいえ
+   carrotは好きですか？ => いいえ
+   watermelonは好きですか？ => いいえ
+   watermelonは好きですか？ => いいえ
+   strawberryは好きですか？ => いいえ
+   strawberryは好きですか？ => いいえ
+=end
