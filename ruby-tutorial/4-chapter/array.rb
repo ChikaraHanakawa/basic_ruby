@@ -76,5 +76,17 @@ def foo(a, *b, c, d)
 end
 foo(1, 2, 3, 4, 5)#=> a=1, b=[2, 3], c=4, d=5
 
-
-
+#全要素を大文字
+x = Array.new(5, 'default')
+str = x[0]
+pp str
+str.upcase!
+pp str
+pp x
+#最初の要素のみ大文字
+y = Array.new(5) {'default'}
+str = y[0]
+pp str
+str.upcase!
+pp str
+pp y
