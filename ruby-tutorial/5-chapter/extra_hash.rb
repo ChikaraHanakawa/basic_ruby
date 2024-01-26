@@ -47,4 +47,8 @@ end
 
 #第一引数がハッシュの場合、関数の()は省略出来ない
 
-#
+#ハッシュから配列
+currencies = {japan: 'yen', us: 'dollar', india: 'rupee'}
+currencies.to_a#=> [[:japan, "yen"], [:us, "dollar"], [:india, "rupee"]]
+array = [[:japan, "yen"], [:us, "dollar"], [:india, "rupee"]]
+array.to_h#=> {:japan=>"yen", :us=>"dollar", :india=>"rupee"}
