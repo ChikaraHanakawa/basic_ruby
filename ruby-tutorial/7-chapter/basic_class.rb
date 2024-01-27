@@ -39,3 +39,17 @@ users.each do |user|
     puts "氏名:#{full_name(user)}, 年齢:#{user.age}"
     puts "#{user.first_name}"
 end
+
+#initialize method（他言語で言う所のコンストラクタらしい
+#以下引数と付けた
+class Human
+    def initialize(name, age)
+        puts "name: #{name}, age: #{age}"
+    end
+end
+=begin
+Human.new
+    => `initialize': wrong number of arguments (given 0, expected 2) (ArgumentError)
+=end
+Human.new('Nobita', 10)#=> name: Nobita, age: 10
+
