@@ -50,6 +50,45 @@ end
 =begin
 Human.new
     => `initialize': wrong number of arguments (given 0, expected 2) (ArgumentError)
+引数を付けないとエラー
 =end
 Human.new('Nobita', 10)#=> name: Nobita, age: 10
+
+#instance method
+class You
+    def hello
+        "Hello!"
+    end
+end
+user = You.new
+#instance methodの呼び出し（ C++で言うメンバ関数
+puts user.hello#=> "Hello!"
+
+#instance variable
+class Ball
+    def initialize(name)
+        @name = name
+    end
+    def soccer
+        "#{@name} : Kick Off"
+    end
+    def name=(value)
+        @name = value
+    end
+    def name
+        @name
+    end
+end
+sports = Ball.new('start')
+puts sports.soccer#=> "start : Kick Off"
+sports.name = 'end'
+puts sports.name#=> "end"
+=begin
+以上のようなname= methodをセッターメソッドという
+name methodをゲッターメソッドという
+セッターとゲッターを総評してアクセサメソッドという
+只、単純にいんすた変数の内容を外部から読み書きする程度であれば、Rubyではattr_accessor methodで余計なメソッド(上記で言うname method)
+=end
+
+
 
