@@ -13,7 +13,7 @@ users[0][:first_name] = 'Carol'
 #ハッシュの中身が変更
 puts users[0]#=> {:first_name=>"Carol", :last_name=>"Ruby", :age=>20, :country=>"japan"}
 =begin
-↑ のような問題がハッシュにはある。だから、ハッシュがある
+↑ のような問題がハッシュにはある。だから、クラスがある
 =end
 
 #Userクラスの定義
