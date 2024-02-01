@@ -87,8 +87,30 @@ puts sports.name#=> "end"
 以上のようなname= methodをセッターメソッドという
 name methodをゲッターメソッドという
 セッターとゲッターを総評してアクセサメソッドという
-只、単純にいんすた変数の内容を外部から読み書きする程度であれば、Rubyではattr_accessor methodで余計なメソッド(上記で言うname method)
+只、単純にいんすた変数の内容を外部から読み書きする程度であれば、Rubyではattr_accessor methodで余計なメソッド(上記で言うname method)の定義を
+省略できる
 =end
 
+class Youser
+    attr_accessor :name
+    def initialize(name)
+        @name = name
+    end
+end
+user = Youser.new('Kobayashi')
+puts user.name = 'Tanaka'#=> "Tanaka"
+
+class Person
+#カンマで複数の引数を渡す事で複数のインスタンス変数に対するaccessor methodを定義できる
+    attr_accessor :name, :age
+
+    def initialize(name, age)
+        @name = name
+        @age = age
+    end
+end
+user = Person.new('Suzuki', 26)
+user.name#=> "Suzuki"
+user.age = 21
 
 

@@ -27,9 +27,9 @@ puts "商 = #{quotient},余り = #{remainder}"# => "商 = 3,余り = 1"
 minit = [0, 10, 20, 30, 40, 50]
 time = []
 minit.each{|n| time << n * 2}
-pp time
+pp time#=> [0, 20, 40, 60, 80, 100]
 second = minit.map{|n| n / 2}
-pp second
+pp second#=> [0, 5, 10, 15, 20, 25]
 
 #select/find_all/reject method
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
