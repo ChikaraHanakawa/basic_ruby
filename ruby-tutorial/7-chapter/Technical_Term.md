@@ -42,3 +42,24 @@ user.first_name = 'ありす'
 user.first_name#=> "ありす"
 ```
 オブジェクトから取得したり変更したりできる属性の事をアトリビュートやプロパティと呼ぶ。
+# ゲッターとセッター
+Rubyはインスタンス変数の値をクラス内でしか参照、変更が原則できない。なので、ゲッターというインスタンス変数を参照する専用のメソッドを定義する必要がある。  
+また、セッターというインスタンス変数を変更する専用のメソッドがある。以下を例とする。  
+```
+class Person_name
+    def initialize(name)
+        @name = name
+    end
+    def getName#ゲッターメソッド
+        @name
+    end
+    def changeName#セッターメソッド
+        @name = name
+    end
+end
+fater = Person_name.new('Tanaka')
+fater.getName
+    => "Tanaka"
+fater.changeName = 'Suzuki'
+    => "Suzuki"
+```
