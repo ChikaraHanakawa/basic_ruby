@@ -40,4 +40,33 @@ foo.baz#=> インスタンスメソッド内のself: #<Foo:0x000055e981d60400>
 クラス構文直下とクラスメソッド内のselfはFooクラス自身を表示しています。インスタンスメソッドはFooクラスのインスタンスを表示している。
 だから、インスタンスメソッド内でクラスメソッドを呼び出す事は出来ない、またその逆も然り
 =end
+class Greeting
+    #クラス定義が読み込まれたタイミングで"Hello!"を3回出力
+    3.times do
+        puts 'Hello!'
+    end
+end
+#=> Hello!
+#   Hello!
+#   Hello!
+
+#class methodからinstance methodを呼び出したい場合
+#クラス名.メソッド名
+class Product
+    attr_reader :name, :price
+    def initialize(name, price)
+        @name = name
+        @price = price
+    end
+    def self.format_price(price)
+        "#{price}円"
+    end
+    def to_s
+        #インスタンスメソッドからクラスメソッドを呼び出す
+        formatted_price = Product.format_price(price)
+        "name: #{name}, price: #{formatted_price}"
+    end
+end
+product = Product.new('A great movie', 1000)
+puts product.to_s#=> name: A great movie, price: 1000円
 
