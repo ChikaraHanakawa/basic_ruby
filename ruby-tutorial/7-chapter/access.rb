@@ -33,3 +33,19 @@ class CD < Product
 end
 cd = CD.new
 cd.to_s#=> name: But Not for Me
+
+#privateでclass methodを定義してもprivate扱いにならない
+=begin
+class User
+    #class << selfならclass methodでもprivateが機能する
+    class << self
+        private
+        def hello
+            'Hello!'
+        end
+    end
+end
+puts User.hello
+=end
+#=> access.rb:45:in `<main>': private method `hello' called for User:Class (NoMethodError)
+
