@@ -23,6 +23,10 @@ TrafficLight::YELLOW#=> 1
 TrafficLight::RED#=> 2
 TrafficLight::COLORS#=> [0, 1, 2]
 
-NUMBER_OF_COLORS = [1, 2, 3].map{ |n|| * 10}
-NUMBER_OF_COLORS#=> [10, 20, 30]
-NEW_LINE = windows? ? "\r\n" : "\n"
+class Product
+    DEFAULT_PRICE = 0
+    DEFAULT_PRICE = 1000
+end
+Product::DEFAULT_PRICE #=> 1000
+Product::DEFAULT_PRICE = 2000
+Product::DEFAULT_PRICE #=> 2000
