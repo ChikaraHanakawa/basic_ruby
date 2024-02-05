@@ -30,3 +30,9 @@ end
 Product::DEFAULT_PRICE #=> 1000
 Product::DEFAULT_PRICE = 2000
 Product::DEFAULT_PRICE #=> 2000
+#定数は既に初期化済みですよ[warning: already initialized constant Product::DEFAULT_PRICE]という警告が出る
+
+#定数を凍結する
+#Product.freeze
+#Product::DEFAULT_PRICE #=> RuntimeError: can't modify frozen Module
+#Product::DEFAULT_PRICE = 3000 #=> RuntimeError: can't modify frozen Module
