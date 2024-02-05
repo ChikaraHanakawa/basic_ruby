@@ -28,16 +28,25 @@ class Product
         @name = name
         @price = price
     end
+    def to_s#over ride
+        "name: #{name}, price: #{price}"
+    end
 end
 class DVD < Product
     attr_reader :running_time
     def initialize(name, price, running_time)
-        @name = name
-        @price = price
+        super(name, price)
         @running_time = running_time
+    end
+    def to_s#over ride
+        "name: #{@name}, price: #{@price}, running_time: #{@running_time}, super( #{super} )"
     end
 end
 dvd = DVD.new('Love Live! School Idol Movie', 1000, 100)
 puts dvd.name#=> 映画タイトル
 puts dvd.price#=> 価格
 puts dvd.running_time#=> 100
+puts dvd.to_s
+
+
+
