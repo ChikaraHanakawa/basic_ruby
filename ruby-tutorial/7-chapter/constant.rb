@@ -34,5 +34,10 @@ Product::DEFAULT_PRICE #=> 2000
 
 #定数を凍結する
 #Product.freeze
-#Product::DEFAULT_PRICE #=> RuntimeError: can't modify frozen Module
-#Product::DEFAULT_PRICE = 3000 #=> RuntimeError: can't modify frozen Module
+#Product::DEFAULT_PRICE 
+    #=> RuntimeError: can't modify frozen Module
+#Product::DEFAULT_PRICE = 3000 
+    #=> RuntimeError: can't modify frozen Module
+
+#map methodを利用して配列の各要素にfreeze method
+SOME_NAMES = ['Foo', 'Bar', 'Baz'].map(&:freeze).freeze

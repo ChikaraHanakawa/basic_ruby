@@ -23,3 +23,38 @@ DVD.new('movie', 1000)#=> name: movie, price: 1000
 def foo
     'foo'
 end#=> :foo
+
+#alias
+class Morning
+    def hello
+        'Hello!'
+    end
+    alias greet hello
+end
+morning = Morning.new
+morning.hello#=> "Hello!"
+morning.greet#=> "Hello!"
+
+#methodの削除
+class User
+    undef freeze
+end
+user = User.new
+#user.freeze
+    #=> undefined method `freeze' for #<User:0x0000557dc7e7c5d0> (NoMethodError)
+
+class Thing
+    attr_reader :code, :name
+    def initialize(code, name)
+        @code = code
+        @name = name
+    end
+    def ==(other)
+        other.is_a?(Thing) && code == other.code
+    end
+end
+a = Thing.new('A-001', 'desk')
+b = Thing.new('B-001', 'chair')
+c = Thing.new('A-001', 'desk')
+puts a == b#=> false
+puts a == c#=> true

@@ -48,4 +48,3 @@ end
 puts User.hello
 =end
 #=> access.rb:45:in `<main>': private method `hello' called for User:Class (NoMethodError)
-
