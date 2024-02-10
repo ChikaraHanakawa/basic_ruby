@@ -64,4 +64,20 @@ t_120 == t_180
 tempos = [Tempo.new(180),Tempo.new(60),Tempo.new(120)]
 pp tempos.sort#=> [60bps, 120bps, 180bps]
 
-
+#mocule_function method
+module Loggable
+    def log(text)
+        puts "[Log]#{text}"
+    end
+#log methodを継承してもモジュールのクラスメソッドとしても利用可、(module_functionは対象メソッドの定義よりも下で呼び出すこと)
+    module_function :log
+end
+Loggable.log('Hello')
+class CallLog
+    include Loggable
+    def title
+        log 'title is called'
+    end
+end
+product = CallLog.new
+product.title
