@@ -22,5 +22,5 @@ aとbは引数であり、引数が無ければ()自体を省略できる
 
 #lambda? method
 add_lambda = ->(a, b){a + b}
-add_lambda.class#=> Proc
-add_lambda.lambda?#=> true
+puts add_lambda.class#=> Proc
+puts add_lambda.lambda?#=> true
