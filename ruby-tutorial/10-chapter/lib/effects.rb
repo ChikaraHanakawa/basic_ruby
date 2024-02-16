@@ -1,7 +1,7 @@
 module Effects
     def self.reverse
         ->(words) do
-            words.split('').map(&:reverse).join('')
+            words.split(' ').map(&:reverse).join(' ')
         end
     end
     def self.echo(rate)
@@ -11,7 +11,7 @@ module Effects
     end
     def self.loud(level)
         ->(words) do
-            words.split('').map {|word| word.upcase + '!' * level}.join('')
+            words.split(' ').map {|word| word.upcase + '!' * level}.join(' ')
         end
     end
 end
