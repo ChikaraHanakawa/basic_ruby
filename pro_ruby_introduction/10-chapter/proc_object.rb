@@ -24,3 +24,11 @@ aとbは引数であり、引数が無ければ()自体を省略できる
 add_lambda = ->(a, b){a + b}
 puts add_lambda.class#=> Proc
 puts add_lambda.lambda?#=> true
+
+#様々な実行方法
+sum_proc = Proc.new{|a, b| a + b}
+sum_proc.call(10, 20)#=> 30
+sum_proc.yield(10, 20)#=> 30
+sum_proc.(10, 20)#=> 30
+sum_proc[10, 20]#=> 30
+sum_proc === [10, 20]#=> 30
